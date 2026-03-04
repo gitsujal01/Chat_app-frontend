@@ -155,9 +155,12 @@ return (
                 <div className={`my-2 ${message.sender === currentUser ? 'bg-green-800':'bg-gray-800'} bg-purple-500 p-2 max-w-xs rounded`}>
                     <div className='flex flex-row gap-2'>
   <img
-  className='h-10 w-10 rounded-full'
-  src={`https://avatar.iran.liara.run/public?username=${message.sender}`}
+  className="h-10 w-10 rounded-full"
+  src={`https://avatar.iran.liara.run/public/${encodeURIComponent(message.sender)}`}
   alt="avatar"
+  onError={(e) => {
+    e.target.src = "https://api.dicebear.com/7.x/identicon/svg?seed=fallback";
+  }}
 />
                     <div className='flex flex-col gap-1' >
                         <p className='text-sm font-bold'>{message.sender}</p>
