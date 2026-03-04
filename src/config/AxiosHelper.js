@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const baseUrl = 'https://chatapp-egww.onrender.com'; 
+export const baseUrl = 'chatapp-backend-production-ceef.up.railway.app'; 
 export const httpClient = axios.create(
     {
         baseURL: baseUrl,
