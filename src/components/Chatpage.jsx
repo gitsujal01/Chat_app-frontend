@@ -122,8 +122,6 @@ function handleLogout()
   setcurrentUser("");
   navigate('/');
 }
-
-
 return (
     <div className=''>
     {/*header portion for chatapp*/}
